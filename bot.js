@@ -2,7 +2,7 @@ const Discord = require('discord.js');
 
 const client = new Discord.Client();
 
-const prefix = 'Z!'
+const prefix = 'S!'
 
 const moment = require("moment")
 
@@ -12,7 +12,7 @@ const fs = require("fs")
 
 client.on('ready', () => {
 
-client.user.setActivity("Welcome To Zombie Games || Z!help",{type: 'WATCHING'})
+client.user.setActivity("Star Army || S!help",{type: 'WATCHING'})
 
 });
 
@@ -62,7 +62,7 @@ client.on("guildMemberAdd", member => {
 
   member.createDM().then(function (channel) {
 
-  return channel.send(`**Welcome ${member} To Zombie Server :rose:`)
+  return channel.send(`**Welcome ${member} To Star Army || Server :rose:`)
 
 }).catch(console.error)
 
@@ -76,7 +76,7 @@ client.on("guildMemberAdd", member => {
 
     if(!welcomer1) return;
 
-     welcomer1.send(`**${member} نتمني انك استمتعت قبل المغادره**`);
+     welcomer1.send(`**${member} نتما انك استمتعت قبل المغادره**`);
 
       })  
 
@@ -100,13 +100,13 @@ let mrxembed = new Discord.RichEmbed()
 
 .setTitle(mrx.username,`#${mrx.discriminator}`)
 
-.addField('» Joined Discord ago',`${moment(member.user.createdAt).format('D/M/YYYY h:mm a')} **\n** \`${moment(member.user.createdAt).fromNow()}\``,true)            
+.addField('» مضى على دخولخ الديسكورد',`${moment(member.user.createdAt).format('D/M/YYYY h:mm a')} **\n** \`${moment(member.user.createdAt).fromNow()}\``,true)          
 
-.addField('» Your Number',`${member.guild.memberCount}`,true)
+.addField('» انت رقم',`${member.guild.memberCount}`,true)
 
 .setThumbnail(mrx.avatarURL)
 
-.setFooter("Zombie Games.")
+.setFooter("Star Army || جيش النجوم.")
 
 welcomer.send({embed:mrxembed});          
 
@@ -294,27 +294,27 @@ invites[g.id] = guildInvites;
 
 client.on('message', message => {
 
-     if (message.content === "Z!help") {
+     if (message.content === "S!help") {
 
          console.log(`${message.author.username} Has Ran Help Command`)
 
 message.author.send(`**
 
-» Z!ban __@NAME__ ( حظر الشخصيه )
+» S!ban __@NAME__ ( حظر الشخصيه )
 
-» Z!kick __@NAME__ ( طرد الشخصيه )
+» S!kick __@NAME__ ( طرد الشخصيه )
 
-» Z!mute __@NAME__ ( اسكات الشخصيه )
+» S!mute __@NAME__ ( اسكات الشخصيه )
 
-» Z!unmute __@NAME__ ( فك اسكات الشخصيه )
+» S!unmute __@NAME__ ( فك اسكات الشخصيه )
 
-» Z!clear  ( مسح الرسائل الخاصه بلمحادثه )
+» S!clear  ( مسح الرسائل الخاصه بلمحادثه )
 
-» Z!dc __ROOM NAME__ ( محي الروم )
+» S!dc __ROOM NAME__ ( محي الروم )
 
-» Z!ct __ROOM NAME__ ( صنع روم كتابي )
+» S!ct __ROOM NAME__ ( صنع روم كتابي )
 
-» Z!cv __ROOM NAME__ ( صنع روم صوتي )**`);
+» S!cv __ROOM NAME__ ( صنع روم صوتي )**`);
 
      }
 
@@ -350,7 +350,7 @@ client.on('message', message => {
 
     if (!message.guild.member(user)
 
-    .bannable) return message.reply("**Please Give ``Zombie`` a High Role | :x:**");
+    .bannable) return message.reply("**Please Give ``Star Army`` a High Role | :x:**");
 
  
 
@@ -362,7 +362,7 @@ client.on('message', message => {
 
           .setColor("RANDOM")
 
-          .setTitle('**Zombie Games**')
+          .setTitle('**Star Army || جيش النجوم**')
 
           .setDescription(`**Done Ban ${user}
 
@@ -418,7 +418,7 @@ client.on('message', message => {
 
           .setColor("RANDOM")
 
-          .setTitle('**Zombie Games**')
+          .setTitle('**Star Army || جيش النجوم**')
 
           .setDescription(`**Done Kick ${user}
 
