@@ -547,13 +547,13 @@ client.on('message', message => {//Mrx - Dev
 
 client.on("guildMemberAdd", (member) => {
 
-client.channels.get('ايدي الروم').edit({name : `『 الأعضاء ↩ ${member.guild.memberCount} 』`});
+client.channels.get('537640877552566273').edit({name : `『 الأعضاء ↩ ${member.guild.memberCount} 』`});
 
 })
 
 client.on("guildMemberRemove", (member) => {
 
-client.channels.get('ايدي الروم').edit({name : `『 الأعضاء ↩ ${member.guild.memberCount} 』`});
+client.channels.get('ا537640877552566273').edit({name : `『 الأعضاء ↩ ${member.guild.memberCount} 』`});
 
 })
 
