@@ -18,10 +18,6 @@ client.user.setActivity("Star Army || S!help",{type: 'WATCHING'})
 
  
 
-client.login(process.env.BOT_TOKEN2);
-
- 
-
 client.on('message',async message => {
 
   if(message.content.startsWith(prefix + "setvvvv")) {
@@ -76,7 +72,7 @@ client.on("guildMemberAdd", member => {
 
     if(!welcomer1) return;
 
-     welcomer1.send(`**${member} نتما انك استمتعت قبل المغادره**`);
+     welcomer1.send(`**${member} نتمنا انك استمتعت قبل المغادره**`);
 
       })  
 
@@ -350,7 +346,7 @@ client.on('message', message => {
 
     if (!message.guild.member(user)
 
-    .bannable) return message.reply("**Please Give ``Star Army`` a High Role | :x:**");
+    .bannable) return message.reply("**Please Give ``Star`` a High Role | :x:**");
 
  
 
