@@ -460,3 +460,5 @@ let reason = message.content.split(" ").slice(2).join(" ");
 
 message.guild.member(user).addRole(muteRole);
 
+      
+client.login(process.env.BOT_TOKEN);
