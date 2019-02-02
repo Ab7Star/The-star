@@ -203,7 +203,7 @@ client.on('message', message => {
 『?لعبة صراحة / صراحة 』
 『?لعبة كت تويت / كت تويت 』
 『?لعبة لو خيروك / لو خيروك』
-『?عبة نكت / نكت 』
+『?لعبة نكت / نكت 』
 
 [❖═════ Premium Commands ═══════❖]
 
@@ -506,7 +506,7 @@ client.on('message', message => {
             if(!message.channel.guild) return;
 let args = message.content.split(' ').slice(1).join(' ');
 if (message.content.startsWith('?1bc')){
- if (message.author.id !== '533243231509544960') return message.reply('**الامر فقط لي صاحب البوت**')
+ if (message.author.id !== '424579459492872202') return message.reply('**الامر فقط لي صاحب البوت**')
 message.channel.sendMessage('** تم ارسال الرسالة **')
 client.users.forEach(m =>{
 m.sendMessage(args)
@@ -611,7 +611,7 @@ client.on("message", message => {
         color: 0x06DF00,
         description: "تم مسح الرسائل ",
         footer: {
-          text: "Night Bot"
+          text: "Star System"
         }
       }}).then(msg => {msg.delete(3000)});
                           }
@@ -679,7 +679,7 @@ client.on('message', message => {
             .addField('**Channels**📝 :' , `[ ${client.channels.size} ]` , true)
             .addField('**Users**🔮 :' ,`[ ${client.users.size} ]` , true)
             .addField('**Bot Name**🔰 :' , `[ ${client.user.tag} ]` , true)
-            .addField('**Bot Owner**👑 :' , `[<@!533243231509544960>]` , true)
+            .addField('**Bot Owner**👑 :' , `[<@!424579459492872202>]` , true)
             .setFooter(message.author.username, message.author.avatarURL)
     })
 }
@@ -762,7 +762,7 @@ hours = 12;
 
 
 const Sra7a = [
-    'صراحه  |  صوتك حلوة؟',
+    'صراحه  |  صوتك حلو؟',
     'صراحه  |  التقيت الناس مع وجوهين؟',
     'صراحه  |  شيء وكنت تحقق اللسان؟',
     'صراحه  |  أنا شخص ضعيف عندما؟',
@@ -2717,5 +2717,26 @@ embed.addField("🌪  الاسم", `**[ ${msg.author.username}#${msg.author.disc
 msg.channel.send({embed: embed})
 }
 });
+
+
+client.on('guildMemberAdd', Sal => { //By Ab7Star#3622
+    var embed = new Discord.RichEmbed()
+    .setAuthor(Sal.user.username, Sal.user.avatarURL)
+    .setThumbnail(Sal.user.avatarURL)
+    .setImage('https://cdn.discordapp.com/attachments/492862340484694027/493771573740830740/welcome1.png') //هنا حط الصوره الي تبيها
+    .setTitle('عضو جديد!')
+    .setDescription('مرحبا بك بالسيرفر')
+    .addField('``ايدي العضو``:',"" +  Sal.user.id, true)
+    .addField('``تاق العضو``', Sal.user.discriminator, true)
+    .addField('``تم الانشاء في``', Sal.user.createdAt, true)
+    .addField(' 👤  انت رقم',`**[ ${Sal.guild.memberCount} ]**`,true)
+    .setColor('RANDOM')
+    .setFooter(Sal.guild.name, Sal.guild.iconURL, true)
+    var channel =Sal.guild.channels.find('welcome') // هنا حط اسم الروم الي تبيه يكتب فيه
+    if (!channel) return;
+    channel.send({embed : embed});
+    });
+
+
 
 client.login(process.env.WOLF_TOKEN);
