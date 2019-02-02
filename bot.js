@@ -133,7 +133,7 @@ client.on('message', message => {
             if(!message.channel.guild) return;
         let embed = new Discord.RichEmbed()
         .setTitle(`🔸 Click Here To Invite | أضغط لدعوة البوت 🔸 `)
-        .setURL(`https://discordapp.com/oauth2/authorize?client_id=534454503873839133&permissions=2080374975&scope=bot`)
+        .setURL(`https://discordapp.com/api/oauth2/authorize?client_id=538084797629857802&permissions=0&scope=bot`)
      message.channel.sendEmbed(embed);
        }
    });
