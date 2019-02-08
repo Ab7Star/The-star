@@ -668,7 +668,7 @@ client.on("message", message => {
 });
 
 client.on('message', message => {
-    if (message.content === ('?bot')) {
+    if (message.content === ('*bot')) {
     message.channel.send({
         embed: new Discord.RichEmbed()
             .setAuthor(client.user.username,client.user.avatarURL)
@@ -2634,7 +2634,7 @@ client.on('message', message => {
  });
 
 client.on('message',message =>{
-    var prefix = "?";
+    var prefix = "*";
     if(message.content.startsWith(prefix + 'topinv')) {
   message.guild.fetchInvites().then(i =>{
   var invites = [];
@@ -2672,7 +2672,7 @@ client.on('message', message => {//roles
 });
 
 client.on('message', message => {
-        var prefix = "?";
+        var prefix = "*";
         if (message.author.bot) return;
         if (!message.content.startsWith(prefix)) return;
 
@@ -2691,7 +2691,7 @@ client.on('message', message => {
       }); 
 
 client.on('message', message => {
-                                        if (message.content.startsWith("?bans")) {
+                                        if (message.content.startsWith("*bans")) {
                                             message.guild.fetchBans()
                                             .then(bans => message.channel.send(`${bans.size} عدد اشخاص المبندة من السيرفر `))
                                       .catch(console.error);
@@ -2732,7 +2732,7 @@ client.on('guildMemberAdd', Sal => { //By Ab7Star#3622
     .addField(' 👤  انت رقم',`**[ ${Sal.guild.memberCount} ]**`,true)
     .setColor('RANDOM')
     .setFooter(Sal.guild.name, Sal.guild.iconURL, true)
-    var channel =Sal.guild.channels.find('welcome') // هنا حط اسم الروم الي تبيه يكتب فيه
+    var channel =Sal.guild.channels.find('. Florida') // هنا حط اسم الروم الي تبيه يكتب فيه
     if (!channel) return;
     channel.send({embed : embed});
     });
