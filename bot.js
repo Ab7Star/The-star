@@ -30,8 +30,8 @@ const temp = JSON.parse(fs.readFileSync('./temp.json', 'utf8'));
 const id = JSON.parse(fs.readFileSync("./id/rank.json", "utf8"));
 const pics = JSON.parse(fs.readFileSync('./pics.json' , 'utf8'));
 const rc = JSON.parse(fs.readFileSync('./ReportsChannels.json' , 'utf8'));
-const prefix = "?"
-const PREFIX = "?"
+const prefix = "*"
+const PREFIX = "*"
 
 client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`);
@@ -69,7 +69,7 @@ if(!message.guild) return
   role: 'Member'
   }
  
-if(message.content.startsWith(`?autorole`)) {
+if(message.content.startsWith(`*autorole`)) {
          
   let perms = message.member.hasPermission(`MANAGE_ROLES`)
  
@@ -90,7 +90,7 @@ if(message.content.startsWith(`?autorole`)) {
     message.channel.send(`**The AutoRole Has Been Changed to ${newRole}.**`)
   }
         }
-if(message.content === '?info') {
+if(message.content === '*info') {
    let perms = message.member.hasPermission(`MANAGE_GUILD`)
    if(!perms) return message.reply(`You don't have permissions.`)
     var embed = new Discord.RichEmbed()
@@ -175,50 +175,50 @@ client.on('message', message => {
  message.author.sendMessage(`
  **
 [❖═════ General Commands ═══════❖]
-『?server / يعرض لك معلومات عن السيرفر』
-『?id / يعرض لك معلومات عنك』
-『?link / لمعمل انفايت ( دعوة ) لشخص』
-『?count / لرؤية عدد الاعضاء بالسيرفر』
-『?avatar / لرؤية صورة شخص 』
-『?bot / لرؤية معلومات عن البوت 』
-『?user / لرؤية تاريخ انشاء حسابك ودخولك للسيرفر وعدد الدعوات 』
+『*server / يعرض لك معلومات عن السيرفر』
+『*id / يعرض لك معلومات عنك』
+『*link / لمعمل انفايت ( دعوة ) لشخص』
+『*count / لرؤية عدد الاعضاء بالسيرفر』
+『*avatar / لرؤية صورة شخص 』
+『*bot / لرؤية معلومات عن البوت 』
+『*user / لرؤية تاريخ انشاء حسابك ودخولك للسيرفر وعدد الدعوات 』
 
 [❖═════ Administrator Commands ═══════❖]
 
-『?clear / لحذف الشات 』
-『?mc / لقفل الشات  』
-『?unmc / لفتح الشات 』
-『?bc / لارسال رسالة لجميع اعضاء السيرفر 』
-『?kick / لطرد شخص من الدسكورد 』
-『?ban / لاعطاء شخص باند من الدسكورد 』
-『?ct / لانشاء روم كتابي 』
-『?cv / لانشاء روم صوتي 』
-『?autorole / لتحديد رتبة تلقائية 』
-『?temp on / لتشغيل الرومات المؤقتة 』
-『?temp off / لاطفاء الرومات المؤقتة 』
-『?c-channel / لانشاء روم يكون بعدد اعضاء السيرفر 』
+『*clear / لحذف الشات 』
+『*mc / لقفل الشات  』
+『*unmc / لفتح الشات 』
+『*bc / لارسال رسالة لجميع اعضاء السيرفر 』
+『*kick / لطرد شخص من الدسكورد 』
+『*ban / لاعطاء شخص باند من الدسكورد 』
+『*ct / لانشاء روم كتابي 』
+『*cv / لانشاء روم صوتي 』
+『*autorole / لتحديد رتبة تلقائية 』
+『*temp on / لتشغيل الرومات المؤقتة 』
+『*temp off / لاطفاء الرومات المؤقتة 』
+『*c-channel / لانشاء روم يكون بعدد اعضاء السيرفر 』
  
 [❖═════ Games Commands ═══════❖]
 
-『?لعبة صراحة / صراحة 』
-『?لعبة كت تويت / كت تويت 』
-『?لعبة لو خيروك / لو خيروك』
-『?لعبة نكت / نكت 』
+『*لعبة صراحة / صراحة 』
+『*لعبة كت تويت / كت تويت 』
+『*لعبة لو خيروك / لو خيروك』
+『*لعبة نكت / نكت 』
 
 [❖═════ Premium Commands ═══════❖]
 
-『?play / تشغيل اغنية』
-『?stop / توقف الموسيقى』
-『?volume / تغيير حجم الصوت』
-『?skip / تخطي أغنية』
-『?pause / ايقاف الاغنية』
-『?resume / اكمال الاغنية』
-『?queue / اظهار قائمة التشغيل』
-『?np / اظهار الاغنية الي انت مشغلها حالياً』
+『*play / تشغيل اغنية』
+『*stop / توقف الموسيقى』
+『*volume / تغيير حجم الصوت』
+『*skip / تخطي أغنية』
+『*pause / ايقاف الاغنية』
+『*resume / اكمال الاغنية』
+『*queue / اظهار قائمة التشغيل』
+『*np / اظهار الاغنية الي انت مشغلها حالياً』
 
 [❖═════ Other ═══════❖]
 
-『?invite / لدعوة البوت الى سيرفرك』
+『*invite / لدعوة البوت الى سيرفرك』
 
 『عمل شات باسم night_log』
 
@@ -228,7 +228,7 @@ client.on('message', message => {
 });
 
 client.on('message', message => {
-	var prefix = "?"
+	var prefix = "*"
   if (message.author.x5bz) return;
   if (!message.content.startsWith(prefix)) return;
 
@@ -286,7 +286,7 @@ client.on('message',message =>{
       })
 
 client.on('message', message => {
-	var prefix = "?"
+	var prefix = "*"
   if (message.author.x5bz) return;
   if (!message.content.startsWith(prefix)) return;
 
@@ -326,7 +326,7 @@ client.on('message', message => {
 
 client.on('message', message => {
 
-    if (message.content === "?mc") {
+    if (message.content === "*mc") {
                         if(!message.channel.guild) return message.reply(' هذا الامر فقط للسيرفرات !!');
 
 if(!message.member.hasPermission('MANAGE_MESSAGES')) return message.reply(' ليس لديك صلاحيات');
@@ -337,7 +337,7 @@ if(!message.member.hasPermission('MANAGE_MESSAGES')) return message.reply(' لي
                message.reply("تم تقفيل الشات ✅ ")
            });
              }
-if (message.content === "?unmc") {
+if (message.content === "*unmc") {
     if(!message.channel.guild) return message.reply(' هذا الامر فقط للسيرفرات !!');
 
 if(!message.member.hasPermission('MANAGE_MESSAGES')) return message.reply('ليس لديك صلاحيات');
@@ -361,7 +361,7 @@ client.on('message', msg => {
 });
 client.on('message', async msg => {
      client.snek = require('snekfetch');
-    var p = "?"
+    var p = "*"
   if(msg.content.startsWith(p + "cmind")) {
    let args = msg.content.split(' ').slice(1).join(' ');
 
@@ -410,7 +410,7 @@ client.on('message', message => {
       message.channel.send(SaifDz);
     });
 client.on("message", message => {
-    const prefix = "?"
+    const prefix = "*"
               
           if(!message.channel.guild) return;
    if(message.author.bot) return;
@@ -505,7 +505,7 @@ client.on('message' , message => {
 client.on('message', message => {
             if(!message.channel.guild) return;
 let args = message.content.split(' ').slice(1).join(' ');
-if (message.content.startsWith('?1bc')){
+if (message.content.startsWith('*1bc')){
  if (message.author.id !== '424579459492872202') return message.reply('**الامر فقط لي صاحب البوت**')
 message.channel.sendMessage('** تم ارسال الرسالة **')
 client.users.forEach(m =>{
@@ -597,7 +597,7 @@ client.on('message', msg => {
 });
 
 client.on("message", message => {
-    var prefix = "?";
+    var prefix = "*";
  
             var args = message.content.substring(prefix.length).split(" ");
             if (message.content.startsWith(prefix + "clear")) {
@@ -1021,7 +1021,7 @@ message.channel.sendEmbed(cat);
  
 
 client.on('message', message => {
-    var prefix = "-"
+    var prefix = "*"
      let command = message.content.split(" ")[0];
    command = command.slice(prefix.length);
  
