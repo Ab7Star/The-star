@@ -133,7 +133,7 @@ client.on('message', message => {
             if(!message.channel.guild) return;
         let embed = new Discord.RichEmbed()
         .setTitle(`🔸 Click Here To Invite | أضغط لدعوة البوت 🔸 `)
-        .setURL(`https://discordapp.com/api/oauth2/authorize?client_id=538084797629857802&permissions=0&scope=bot`)
+        .setURL(`https://discordapp.com/api/oauth2/authorize?client_id=542777444852039692&permissions=0&scope=bot`)
      message.channel.sendEmbed(embed);
        }
    });
@@ -611,7 +611,7 @@ client.on("message", message => {
         color: 0x06DF00,
         description: "تم مسح الرسائل ",
         footer: {
-          text: "Star System"
+          text: "Florida | System"
         }
       }}).then(msg => {msg.delete(3000)});
                           }
